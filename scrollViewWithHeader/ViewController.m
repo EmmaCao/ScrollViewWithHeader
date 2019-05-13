@@ -29,15 +29,26 @@
 -(void)setupView
 {
     Test1ViewController *vc1 = [[Test1ViewController alloc] init];
+    //若vc1上有tableview，不添加addChildViewController，会导致滑动的时候tableview消失
+    [self addChildViewController:vc1];
     vc1.view.backgroundColor = [UIColor redColor];
     LeftRightHeaderModel *model1 = [LeftRightHeaderModel LeftRightHeaderModelWithTitle:@"test1" view:vc1.view];
+    
     Test1ViewController *vc2 = [[Test1ViewController alloc] init];
+    //若vc1上有tableview，不添加addChildViewController，会导致滑动的时候tableview消失
+    [self addChildViewController:vc2];
     vc2.view.backgroundColor = [UIColor greenColor];
     LeftRightHeaderModel *model2 = [LeftRightHeaderModel LeftRightHeaderModelWithTitle:@"test2" view:vc2.view];
+    
     Test1ViewController *vc3 = [[Test1ViewController alloc] init];
+    //若vc1上有tableview，不添加addChildViewController，会导致滑动的时候tableview消失
+    [self addChildViewController:vc3];
     vc3.view.backgroundColor = [UIColor purpleColor];
     LeftRightHeaderModel *model3 = [LeftRightHeaderModel LeftRightHeaderModelWithTitle:@"test3" view:vc3.view];
+    
     Test1ViewController *vc4 = [[Test1ViewController alloc] init];
+    //若vc1上有tableview，不添加addChildViewController，会导致滑动的时候tableview消失
+    [self addChildViewController:vc4];
     vc4.view.backgroundColor = [UIColor brownColor];
     LeftRightHeaderModel *model4 = [LeftRightHeaderModel LeftRightHeaderModelWithTitle:@"test4" view:vc4.view];
     
